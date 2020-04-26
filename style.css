@@ -1,0 +1,207 @@
+/*
+Theme Name: Portfolio Alicia Cardete
+Description: Portfolio de Alicia Cardete. 
+Author: Alicia Cardete
+Version: 2.0
+domainText: Portfolio
+*/
+/* --- Common --- */
+/* -- Ex: @import '../sass/common/variables.scss'; --*/
+/* Ex: @media screen and (min-width:$lgDevice) {
+        width: 100%;
+    } */
+/* --- MEDIA QUERIES --- */
+/* --- SCAFFOLDING --- */
+.smContainer {
+  max-width: 800px;
+  padding: 0 5%; }
+  @media screen and (min-width: 768px) {
+    .smContainer {
+      padding: 0; } }
+
+/* --- PALETTE COLOR --- */
+/* --- TYPOGRAPHIES --- */
+@font-face {
+  font-family: Gotu;
+  src: url(../../fonts/Gotu-Regular.ttf); }
+/* --- TYPOGRAPHY SIZES --- */
+/* --- STYLES FONTS --- */
+/* Ex: @extend .class; */
+p, a {
+  font-size: 1.8em; }
+
+h1, h2, h3, h4 {
+  font-weight: 100; }
+
+.hero {
+  font-size: 12em;
+  font-weight: 100;
+  color: #F64949;
+  line-height: 0;
+  mix-blend-mode: multiply; }
+  @media screen and (min-width: 480px) {
+    .hero {
+      font-size: 20em; } }
+
+.primaryTitle {
+  font-size: 12em;
+  color: #F64949; }
+
+.secondaryTitle {
+  font-size: 3.4em;
+  color: white; }
+  @media screen and (min-width: 480px) {
+    .secondaryTitle {
+      font-size: 5em; } }
+
+.tertiaryTitle {
+  font-size: 2.8em;
+  color: #FDE9E9; }
+  @media screen and (min-width: 480px) {
+    .tertiaryTitle {
+      font-size: 5em; } }
+
+.paragraph-big {
+  font-size: 2.8em;
+  color: #F64949;
+  letter-spacing: -2; }
+  @media screen and (min-width: 480px) {
+    .paragraph-big {
+      font-size: 3.4em; } }
+
+html * {
+  box-sizing: border-box;
+  margin: 0; }
+
+html {
+  font-size: 50%; }
+  @media screen and (min-width: 768px) {
+    html {
+      font-size: 62.5%;
+      /* Sets up the Base 10 stuff */ } }
+
+body {
+  font-family: "Gotu";
+  background-color: #FDE9E9;
+  color: #610000;
+  transition: background-color .5s ease-out; }
+
+.color-pinkLight {
+  background-color: #FDE9E9; }
+
+.color-pinkMedium {
+  background-color: #FBB2B2; }
+
+::-moz-selection {
+  /* Code for Firefox */
+  background-color: transparent;
+  color: #000; }
+
+::selection {
+  background-color: transparent;
+  color: #000; }
+
+@keyframes scrollMe {
+  0% {
+    height: 0; }
+  100% {
+    height: 20%; } }
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+/*img {
+  width: 100%;
+  height: auto;
+  filter: brightness(80%) sepia(1) hue-rotate(0) saturate(91.0%) brightness(73.7%);
+  transition: all .2s ease-in-out; 
+
+  &:hover {
+    filter: none; 
+  }
+}*/
+.color-img {
+  filter: none; }
+
+/* --- Components --- */
+footer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 0;
+  border-top: 2px solid #F64949;
+  display: flex;
+  justify-content: space-between; }
+  footer p, footer a {
+    color: #F64949;
+    font-size: 1.2em; }
+
+/* --- Layouts --- */
+.contactBlock,
+.introBlock {
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.introBlock {
+  position: relative; }
+  .introBlock .textBlock {
+    position: relative; }
+    .introBlock .textBlock::after {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      display: inline-block;
+      width: 50%;
+      height: 115%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #FBB2B2; }
+      @media screen and (min-width: 768px) {
+        .introBlock .textBlock::after {
+          width: 45%; } }
+  .introBlock .scrollMe {
+    z-index: 1;
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 20%;
+    background-color: #F64949;
+    position: absolute;
+    left: 50%;
+    bottom: -3%;
+    transform: translateX(-50%);
+    animation-name: scrollMe;
+    animation-duration: 1.6s; }
+
+.projectsBlock {
+  padding: 10% 0; }
+  .projectsBlock--container {
+    max-width: 1400px;
+    margin: 0 auto; }
+  .projectsBlock .projects {
+    margin-top: 8%;
+    border: 1px solid red; }
+    .projectsBlock .projects .project-item {
+      text-align: center;
+      border: 1px solid blue; }
+    .projectsBlock .projects img, .projectsBlock .projects figcaption {
+      max-width: 30%;
+      margin: 0 auto; }
+    .projectsBlock .projects figcaption {
+      text-align: left; }
+  .projectsBlock h3 {
+    text-align: center; }
+
+.contactBlock .primaryTitle {
+  margin-bottom: 5%; }
+
+/*# sourceMappingURL=style.css.map */

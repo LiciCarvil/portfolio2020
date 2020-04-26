@@ -1,0 +1,13 @@
+footer {
+    max-width: $bgContainer;
+    margin: 0 auto;
+    padding: 24px 0;
+    border-top: 2px solid $secondaryColor;
+    display: flex;
+    justify-content: space-between;
+
+    p, a {
+        color: $secondaryColor;
+        font-size: 1.2em;
+    }
+}

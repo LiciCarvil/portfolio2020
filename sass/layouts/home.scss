@@ -1,0 +1,91 @@
+.contactBlock, 
+.introBlock {
+    height: 100vh;
+    margin: 0 auto; 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.introBlock {
+    position: relative;
+
+    .textBlock {
+        position: relative;
+
+        &::after {
+            z-index: -1; 
+            position: absolute;
+            content: '';
+            display: inline-block;
+            width: 50%; 
+            height: 115%;
+            left: 50%; 
+            top: 50%; 
+            transform: translate(-50%, -50%);
+            background-color: $pinkMedium;
+
+            @media screen and (min-width:$smDevice) {
+                width: 45%;
+            }
+        }
+    }
+
+    .scrollMe {
+        z-index: 1;
+        content: '';
+        display: inline-block;
+        width: 2px;
+        height: 20%;
+        background-color: $watermelon;
+        position: absolute;
+        left: 50%;
+        bottom: -3%;
+        transform: translateX(-50%);
+        animation-name: scrollMe;
+        animation-duration: 1.6s;
+        }
+}
+
+.projectsBlock {
+    //background-color: $pinkMedium;
+    padding: 10% 0;
+
+    &--container {
+        max-width: $bgContainer;
+        margin: 0 auto;
+    }
+
+    .projects {
+        margin-top: 8%;
+        border: 1px solid red;
+
+        .project-item {
+            text-align: center;
+            border: 1px solid blue;
+        }
+
+        img, figcaption {
+            max-width: 30%;
+            margin: 0 auto;
+        }
+
+        figcaption {
+            text-align: left;
+        }
+    }
+
+    h3 {
+        text-align: center;
+    }
+    
+}
+
+
+.contactBlock {
+    .primaryTitle {
+        margin-bottom: 5%;
+    }
+
+} 

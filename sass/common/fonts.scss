@@ -1,0 +1,74 @@
+/* --- TYPOGRAPHIES --- */ 
+@font-face {
+    font-family: Gotu;
+    src: url(../../fonts/Gotu-Regular.ttf);
+}
+
+/* --- TYPOGRAPHY SIZES --- */ 
+$fontBase:          1em; // 10px; 
+
+$fontXS:            1.8em;
+$fontSM:            3.4em; 
+$fontMD:            5em; 
+$fontLG:            7.2em; 
+$fontXL:            12em; 
+$fontHero:          20em;
+
+/* --- STYLES FONTS --- */
+/* Ex: @extend .class; */
+$primaryFont:       'Gotu'; 
+
+p, a {
+    font-size: $fontXS;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 100;
+}
+
+.hero {
+    font-size: $fontXL;
+    font-weight: 100;
+    color: $secondaryColor;
+    line-height: 0; 
+    mix-blend-mode: multiply; 
+
+    @media screen and (min-width:$xsDevice) {
+        font-size: $fontHero;
+    }
+}
+
+.primaryTitle {
+    font-size: $fontXL;
+    color: $secondaryColor;
+}
+
+.secondaryTitle {
+    font-size: $fontSM;
+    color: white;
+
+    @media screen and (min-width:$xsDevice) {
+        font-size: $fontMD;
+    }
+}
+
+.tertiaryTitle {
+    font-size: 2.8em;
+    color: $pinkLight;
+    
+    @media screen and (min-width:$xsDevice) {
+        font-size: $fontMD;
+    }
+}
+
+.paragraph {
+    &-big {
+        font-size: 2.8em;
+        color: $secondaryColor; 
+        letter-spacing: -2; 
+
+        @media screen and (min-width:$xsDevice) {
+            font-size: $fontSM;
+        }
+    }
+}

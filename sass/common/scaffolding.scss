@@ -1,0 +1,24 @@
+/* Ex: @media screen and (min-width:$lgDevice) {
+        width: 100%;
+    } */
+
+/* --- MEDIA QUERIES --- */ 
+$xsDevice:          480px; // Phone (landscape + portrait)
+$smDevice:          768px; // Large Table (portrait)
+$mdDevice:          1024px; // Large Table (landscape)
+$lgDevice:          1280px; // Desktop
+$xlDevice:          1440px; // Wide screen Desktop
+
+/* --- SCAFFOLDING --- */ 
+$bgContainer: 1400px; 
+$mdContainer: 1200px; 
+$smContainer: 800px; 
+
+.smContainer {
+    max-width: $smContainer;
+    padding: 0 5%; 
+
+    @media screen and (min-width:$smDevice) {
+        padding: 0;
+    }
+}

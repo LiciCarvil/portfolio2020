@@ -1,0 +1,90 @@
+html * {
+  box-sizing: border-box;
+  margin: 0;
+  
+}
+
+html {
+  font-size: 50%;
+
+  @media screen and (min-width:$smDevice) {
+    font-size: 62.5%; /* Sets up the Base 10 stuff */
+  }
+}
+
+#wpadminbar {
+  //display: none;
+}
+
+body {
+  font-family: $primaryFont;
+  background-color: $pinkLight; 
+  color: $primaryColor;
+  transition: background-color .5s ease-out;
+}
+
+// TO CHANGE BACKGROUND COLOR WHILE SCROLLING
+.color-pinkLight {
+  background-color: $pinkLight;
+}
+
+.color-pinkMedium {
+  background-color: $pinkMedium;
+}
+
+// TO PERSONALIZE SELECTION TEXT 
+::-moz-selection { /* Code for Firefox */
+  background-color: transparent;
+  color: #000;
+}
+
+::selection {
+  background-color: transparent;
+  color: #000;
+}
+
+@keyframes scrollMe {
+  0% {
+    height: 0; 
+  }
+  100% {
+    //transform: translateY(20px);
+    height: 20%;
+  }
+}
+
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none; 
+  }
+
+  &:visited {
+    //color: currentColor; 
+  }
+}
+
+.hidden {
+  display: none; 
+  visibility: hidden;
+}
+
+/*img {
+  width: 100%;
+  height: auto;
+  filter: brightness(80%) sepia(1) hue-rotate(0) saturate(91.0%) brightness(73.7%);
+  transition: all .2s ease-in-out; 
+
+  &:hover {
+    filter: none; 
+  }
+}*/
+
+.color-img {
+  filter: none;
+}
+
+
+

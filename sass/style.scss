@@ -1,0 +1,24 @@
+/*
+Theme Name: Portfolio Alicia Cardete
+Description: Portfolio de Alicia Cardete. 
+Author: Alicia Cardete
+Version: 2.0
+domainText: Portfolio
+*/
+
+/* --- Common --- */
+/* -- Ex: @import '../sass/common/variables.scss'; --*/
+@import '../sass/common/scaffolding.scss'; 
+@import '../sass/common/colors.scss';
+@import '../sass/common/fonts.scss';  
+@import '../sass/common/mixins.scss';
+@import '../sass/common/global.scss';
+
+
+
+/* --- Components --- */
+@import '../sass/components/footer.scss';
+
+/* --- Layouts --- */
+@import '../sass/layouts/home.scss'; 
+@import '../sass/layouts/single.scss';
