@@ -23,6 +23,10 @@
         wp_enqueue_script('tweenMax', get_template_directory_uri().'/js/TweenMax.min.js', array('jquery'), false, true);
         wp_enqueue_script('scrollMagic', get_template_directory_uri().'/js/ScrollMagic.min.js', array('jquery'), false, true);
         wp_enqueue_script('scrollMagicIndicators', get_template_directory_uri().'/js/debug.addIndicators.min.js', array('jquery'), false, true);
+        
+        wp_enqueue_script('imagesloaded.pkgd.min', get_template_directory_uri().'/js/imagesloaded.pkgd.min.js', array('jquery'), false, true);
+        wp_enqueue_script('demo', get_template_directory_uri().'/js/demo.js', array('jquery'), false, true);
+        
         wp_enqueue_script('main', get_template_directory_uri().'/js/main.js', array('jquery'), false, true);
     }
     

@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+    <main>
+    <div data-scroll class="page page--layout-1">
+    <div class="content content--full content--alternate">
+
     <section class="panel introBlock smContainer" data-color="pinkLight">
         <div class="textBlock">
             <h1 class="hero">Hello</h1>
@@ -45,10 +49,24 @@
     </section>
 
     <section class="panel contactBlock smContainer" data-color="pinkLight">
+        <div class="content__item content__item--wide">
+            <span class="content__item-number">01</span>
+            <div class="content__item-imgwrap"><div class="content__item-img" style="background-image:url(<?= $thumbnail ?>)"></div></div>
+            <div class="content__item-deco"></div>
+            <h2 class="content__item-title">Oh</h2>
+            <p class="content__item-description">Little trees and bushes grow however makes them happy.</p>
+        </div>
+    </section>
+
+    <section class="panel contactBlock smContainer" data-color="pinkMedium">
         <adress class="textBlock">
             <p class="primaryTitle">Say hello</p>
             <a href="mailto:name@email.com" class="paragraph-big">aliciacdt.job@gmail.com</a>
         </adress>
     </section>
+
+    </div>
+    </div>
+    </main> 
 
 <?php get_footer(); ?>
