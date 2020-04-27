@@ -203,9 +203,7 @@ footer {
   .projectsBlock h3 {
     text-align: center; }
 
-.contactBlock {
-  border: 2px solid purple; }
-  .contactBlock .primaryTitle {
-    margin-bottom: 5%; }
+.contactBlock .primaryTitle {
+  margin-bottom: 5%; }
 
 /*# sourceMappingURL=style.css.map */

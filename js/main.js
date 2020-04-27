@@ -13,7 +13,7 @@ $(document).ready(function() {
 
   // ZOOM IMAGES WHILE SCROLLING
   // Higher number = more zoom
-let scaleAmount = 0.2;
+let scaleAmount = 0.5;
 
 function scrollZoom() {
   const images = document.querySelectorAll("[data-scroll-zoom]");
