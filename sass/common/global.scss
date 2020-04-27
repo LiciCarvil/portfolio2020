@@ -17,10 +17,13 @@ html {
 }
 
 body {
+  margin: 0;
   font-family: $primaryFont;
   background-color: $pinkLight; 
   color: $primaryColor;
   transition: background-color .5s ease-out;
+  --aspect-ratio: 1/1.5;
+	--imgwidthmax: 800px; 
 }
 
 // TO CHANGE BACKGROUND COLOR WHILE SCROLLING
