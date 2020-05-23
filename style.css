@@ -13,7 +13,7 @@ domainText: Portfolio
 /* --- MEDIA QUERIES --- */
 /* --- SCAFFOLDING --- */
 .smContainer {
-  max-width: 800px;
+  max-width: 700px;
   padding: 0 5%; }
   @media screen and (min-width: 768px) {
     .smContainer {
@@ -24,6 +24,9 @@ domainText: Portfolio
 @font-face {
   font-family: Gotu;
   src: url(../../fonts/Gotu-Regular.ttf); }
+@font-face {
+  font-family: Mak;
+  src: url(../../fonts/MAK.otf); }
 /* --- TYPOGRAPHY SIZES --- */
 /* --- STYLES FONTS --- */
 /* Ex: @extend .class; */
@@ -31,19 +34,21 @@ p, a {
   font-size: 1.8em; }
 
 h1, h2, h3, h4 {
-  font-weight: 100; }
+  font-family: "Mak";
+  font-weight: 100 !important; }
 
 .hero {
   font-size: 12em;
-  font-weight: 100;
   color: #F64949;
   line-height: 0;
-  mix-blend-mode: multiply; }
+  mix-blend-mode: multiply;
+  margin-bottom: 0.5em; }
   @media screen and (min-width: 480px) {
     .hero {
       font-size: 20em; } }
 
 .primaryTitle {
+  font-family: "Mak";
   font-size: 12em;
   color: #F64949; }
 
@@ -52,7 +57,7 @@ h1, h2, h3, h4 {
   color: white; }
   @media screen and (min-width: 480px) {
     .secondaryTitle {
-      font-size: 5em; } }
+      font-size: 7.2em; } }
 
 .tertiaryTitle {
   font-size: 2.8em;
@@ -163,7 +168,7 @@ footer {
       content: '';
       display: inline-block;
       width: 50%;
-      height: 115%;
+      height: 130%;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
@@ -191,7 +196,15 @@ footer {
     max-width: 1400px;
     margin: 0 auto; }
   .projectsBlock .project {
-    border: 1px solid purple; }
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center; }
+  .projectsBlock .projectEven {
+    justify-content: flex-start; }
+  .projectsBlock .projectOdd {
+    justify-content: flex-end; }
   .projectsBlock .imageWrap {
     height: 70vmin;
     width: 50vw;
@@ -199,7 +212,8 @@ footer {
   .projectsBlock .innerImage {
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    filter: brightness(70%) sepia(1) saturate(3.5) hue-rotate(307deg) brightness(100%) contrast(77%); }
   .projectsBlock h3 {
     text-align: center; }
 

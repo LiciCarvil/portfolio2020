@@ -20,10 +20,12 @@
         wp_enqueue_style('swiper_style', get_template_directory_uri().'/css/swiper.min.css', false);
 
         wp_enqueue_script('swiper', get_template_directory_uri().'/js/swiper.min.js', array('jquery'), false, true);
-        wp_enqueue_script('tweenMax', get_template_directory_uri().'/js/TweenMax.min.js', array('jquery'), false, true);
+        wp_enqueue_script('easeScroll', get_template_directory_uri().'/js/jquery.easeScroll.js', array('jquery'), false, true);
+        wp_enqueue_script('gsap', get_template_directory_uri().'/js/gsap.min.js', array('jquery'), false, true);
         wp_enqueue_script('scrollMagic', get_template_directory_uri().'/js/ScrollMagic.min.js', array('jquery'), false, true);
         wp_enqueue_script('scrollMagicIndicators', get_template_directory_uri().'/js/debug.addIndicators.min.js', array('jquery'), false, true);
-        
+        wp_enqueue_script('scrollMagicAnimation', get_template_directory_uri().'/js/animation.gsap.min.js', array('jquery'), false, true);
+
         wp_enqueue_script('imagesloaded.pkgd.min', get_template_directory_uri().'/js/imagesloaded.pkgd.min.js', array('jquery'), false, true);
         wp_enqueue_script('demo', get_template_directory_uri().'/js/demo.js', array('jquery'), false, true);
         

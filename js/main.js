@@ -1,6 +1,9 @@
 $ = jQuery;
 
 $(document).ready(function() {
+
+  $("html").easeScroll();
+
   //initialize swiper when document ready
 
   // var swiper = new Swiper(".swiper-container", {
@@ -11,9 +14,9 @@ $(document).ready(function() {
   // });
 
 
-  // ZOOM IMAGES WHILE SCROLLING
+// ZOOM IMAGES WHILE SCROLLING
   // Higher number = more zoom
-let scaleAmount = 0.5;
+let scaleAmount = 0.3;
 
 function scrollZoom() {
   const images = document.querySelectorAll("[data-scroll-zoom]");
@@ -81,7 +84,7 @@ scrollZoom();
 
 
 
-  // TO CHANGE COLOR BACKGROUND WHILE SCROLLING
+// TO CHANGE COLOR BACKGROUND WHILE SCROLLING
   $(window).scroll(function() {
   
     // selectors
@@ -115,24 +118,43 @@ scrollZoom();
   // ----------- ScrollMagic -----------
 
   // Init ScrollMagic
-  var controller = new ScrollMagic.Controller(); 
+  var controller = new ScrollMagic.Controller({vertical: true});
 
-  //Loop 
-  $('.scrollmagic-block').each(function() {
-    // Build a scene
-    var ourScene = new ScrollMagic.Scene({
-      triggerElement: this,
-      triggerHook: 0.9,
-      reverse: false,
-    })
+    // build Tween
+    var tween = new TimelineMax ()
+        .add([
+          TweenMax.fromTo("#parallaxText .layer3", 1, {}, {top: -800, ease: Linear.easeNone})
+        ]);
 
-    .setClassToggle(this, 'fade-in') // add class to experience-block
-    .addIndicators({
-      name: 'fade scene',
-      colorStart: 'red',
-      colorEnd: 'violet'
-    })
-    .addTo(controller);
+      // build scene
+      var scene = new ScrollMagic.Scene({
+        duration: $(window).height(),
+        triggerElement: '.projectsBody',
+      })
+              .setTween(tween)
+              .addIndicators() // add indicators (requires plugin)
+              .addTo(controller);
 
-  })
+
+    // Loop through each project 
+    //$('.project').each(function() {
+
+      //console.log(this)
+
+        // Build a scene
+        //var ourScene = new ScrollMagic.Scene({
+          //triggerElement: this,
+          //duration: 300,
+          //triggerHook: 0.1, 
+        //})
+
+      //.setClassToggle('#parallaxTitle', 'moveOn') // add class to prueba
+      //.addIndicators({
+        //name: 'parallaxTitle',
+     // }) 
+      //.addTo(controller);
+    //})
+
+
+   
 });
